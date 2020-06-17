@@ -1,3 +1,4 @@
+```cs
 nop
 if([AcSdk]AcSdk.AcSdk::this._initialized == null)
 	return 1;
@@ -27,3 +28,4 @@ catch([mscorlib]System.Exception)
 
 
 return 1;
+```
