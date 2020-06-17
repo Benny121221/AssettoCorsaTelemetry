@@ -13,11 +13,11 @@ Since the graphs are broken, I suggest you plot the CSVs in Excel or another gra
 - Many columns do not work, reporting either nonsense or nothing
     - Some are even so bold as to report binaries
     - They may have worked in 2014 when this was last updated
-        - If you want to try a 2014 copy of the game, you can let me know if this is the case
+        - If you want to try a 2014 copy of the game, you are welcome to let me know if this is the case
     - The "important" columns (throttle, brake, gear, steering angle and speed) all work fine
         - So do the suspension, and tyre columns
-        - Velocity and acceleration appear to be fine
-        - All status and timing-related columns are broken (with the exception of the `UNIXTimestamp` column
+     - Velocity and acceleration appear to be fine
+     - All status and timing-related columns are broken (with the exception of the `UNIXTimestamp` column
 
 Below is the original readme:
 
