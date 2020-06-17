@@ -608,6 +608,7 @@ namespace AssettoCorsaTelemetry
                     if (graphMember.Name != "PacketId")
                         f.Write(graphMember.Name + ",");
                 }
+                f.Write("UNIXTimeStamp_Seconds");
                 f.Write("\r\n");
             }
 
@@ -785,6 +786,12 @@ namespace AssettoCorsaTelemetry
             //Track.DrawTrack(xCoordinates, yCoordinates, _isInTurns);
         }
 
+        private long beginningOfTime = new DateTime(1970, 1, 1).Ticks;
+        private long GetUnixTime()
+		{
+            return (DateTime.UtcNow.Ticks - beginningOfTime) / 10_000_000;
+		}
+
         private void AppendToFile(Physics physics, Graphics graphics)
         {
             using (StreamWriter f = File.AppendText(_filepath))
@@ -823,6 +830,7 @@ namespace AssettoCorsaTelemetry
                 }
 
 
+                WriteObjToFile(f, GetUnixTime());
                 f.Write("\r\n");
             }
         }
