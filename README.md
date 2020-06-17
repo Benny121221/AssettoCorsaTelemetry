@@ -1,3 +1,13 @@
+# Forkers Notes
+
+This is abandonware to a legendary degree. At the time of writing it has had no commits for 6 years, apart from my own. Most of the functionality is in an undocumented DLL with no known source code (or known to me at least). Because the project is unlicensed reverse engineering is theoretically illegal. And the WPF app is 99% broken. All it does (correctly) is log CSVs.
+
+Fortunately, those CSVs are rather useful, and while a few fields are broken, most work as expected. However, I was not able to concretely find the frequency of logs even with a decompiler. Experimentally the frequency seems to be once every 15 ms (66.667 Hz). I cannot ascertain whether this is consistent or dependent on system load. Unfortunately this means I must suggest that you log the start and end times of your session and divide by the number of rows. And this makes the unwarranted assumption that the logging interval is consistent enough for this to be useful.
+
+Since the graphs are broken, I suggest you plot the CSVs in Excel or another graphing tool. If I may shamelessly plug my own graphing program, it is available here: https://github.com/Benny121221/WPlot. If you want a C# plotting library, I contribute to this one: https://github.com/swharden/ScottPlot. Or use one of your preference, whatever floats your boat.
+
+Below is the original readme:
+
 AssettoCorsaTelemetry
 =====================
 
