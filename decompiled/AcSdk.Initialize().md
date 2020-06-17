@@ -21,7 +21,7 @@ catch([mscorlib]System.IO.FileNotFoundException)
 { //L_0049 to L_004F
 	return 0;
 }
-catch([mscorlib]System.Exception)
+catch([mscorlib]System.Exception) //This catch does nothing, I suspect this is down to how try statements are compiled to MSIL, not an explicit statement from the author
 { //L_004F to L_005A
 	rethrow
 }
