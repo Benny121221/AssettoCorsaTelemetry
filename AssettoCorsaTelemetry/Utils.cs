@@ -191,7 +191,10 @@ namespace AssettoCorsaTelemetry
                     newSections.Add(currentSection);
                 }
                 currentSection++;
-                currentSection %= numSections;
+                if(numSections != 0)
+				{
+                    currentSection %= numSections;
+				}
             }
 
             return newSections;
