@@ -2,9 +2,22 @@
 
 This is abandonware to a legendary degree. At the time of writing it has had no commits for 6 years, apart from my own. Most of the functionality is in an undocumented DLL with no known source code (or known to me at least). Because the project is unlicensed reverse engineering is theoretically illegal. And the WPF app is 99% broken. All it does (correctly) is log CSVs.
 
-Fortunately, those CSVs are rather useful, and while a few fields are broken, most work as expected. However, I was not able to concretely find the frequency of logs even with a decompiler. Experimentally the frequency seems to be once every 15 ms (66.667 Hz). I cannot ascertain whether this is consistent or dependent on system load. Unfortunately this means I must suggest that you log the start and end times of your session and divide by the number of rows. And this makes the unwarranted assumption that the logging interval is consistent enough for this to be useful.
+Fortunately, those CSVs are rather useful, and while a few fields are broken, most work as expected. However, I was not able to concretely find the frequency of logs even with a decompiler. Experimentally the frequency seems to be beween 15 and 20 ms, on my computer. I added a `UNIXTimestamp` column to help work around this inconsistency
 
 Since the graphs are broken, I suggest you plot the CSVs in Excel or another graphing tool. If I may shamelessly plug my own graphing program, it is available here: https://github.com/Benny121221/WPlot. If you want a C# plotting library, I contribute to this one: https://github.com/swharden/ScottPlot. Or use one of your preference, whatever floats your boat.
+
+## Strange Quirks
+- The column for gears assigns reverse to 0, neutral to 1, first gear to 2, etc.
+- Velocity is a 3-D vector, but it is recorded in the form `<x>:<y>:<z>`, which means if you open it in Excel, velocity is a time
+    - This formatting is true for most vector quantities
+- Many columns do not work, reporting either nonsense or nothing
+    - Some are even so bold as to report binaries
+    - They may have worked in 2014 when this was last updated
+        - If you want to try a 2014 copy of the game, you can let me know if this is the case
+    - The "important" columns (throttle, brake, gear, steering angle and speed) all work fine
+        - So do the suspension, and tyre columns
+        - Velocity and acceleration appear to be fine
+        - All status and timing-related columns are broken (with the exception of the `UNIXTimestamp` column
 
 Below is the original readme:
 
