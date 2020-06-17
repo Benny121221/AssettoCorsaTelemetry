@@ -18,6 +18,7 @@ Since the graphs are broken, I suggest you plot the CSVs in Excel or another gra
         - So do the suspension, and tyre columns
      - Velocity and acceleration appear to be fine
      - All status and timing-related columns are broken (with the exception of the `UNIXTimestamp` column
+     - Position and sector data is broken
 
 Below is the original readme:
 
