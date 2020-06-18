@@ -1,5 +1,7 @@
 # Forkers Notes
 
+**I have an alternate app which is much more stable: https://github.com/Benny121221/AssettoCorsaTelemetryApp**
+
 This is abandonware to a legendary degree. At the time of writing it has had no commits for 6 years, apart from my own. Most of the functionality is in an undocumented DLL with no known source code (or known to me at least). Because the project is unlicensed reverse engineering is theoretically illegal. And the WPF app is 99% broken. All it does (correctly) is log CSVs.
 
 Fortunately, those CSVs are rather useful, and while a few fields are broken, most work as expected. However, I was not able to concretely find the frequency of logs even with a decompiler. Experimentally the frequency seems to be beween 15 and 20 ms, on my computer. I added a `UNIXTimestamp` column to help work around this inconsistency
