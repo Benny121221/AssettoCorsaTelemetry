@@ -24,7 +24,7 @@ Currently I am working on figuring out how the `AcSdk.dll` works. Check on my pr
 
 This app reads from Assetto Corsa's shared memory, and unfortunately the memory map is subject to change quite often. The most recent memory map I could find is this: https://assettocorsamods.net/threads/doc-shared-memory-reference.58/
 
-The most recent Asseto Corsa Comeptizione memory map that I could find is available here, it may be useful: https://www.assettocorsa.net/forum/index.php?threads/acc-shared-memory-documentation.59965/
+The most recent Asseto Corsa Competizione memory map that I could find is available here, it may be useful: https://www.assettocorsa.net/forum/index.php?threads/acc-shared-memory-documentation.59965/
 
 Below is the original readme:
 
