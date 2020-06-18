@@ -6,6 +6,8 @@ Fortunately, those CSVs are rather useful, and while a few fields are broken, mo
 
 Since the graphs are broken, I suggest you plot the CSVs in Excel or another graphing tool. If I may shamelessly plug my own graphing program, it is available here: https://github.com/Benny121221/WPlot. If you want a C# plotting library, I contribute to this one: https://github.com/swharden/ScottPlot. Or use one of your preference, whatever floats your boat.
 
+Currently I am working on figuring out how the `AcSdk.dll` works. Check on my progress at `../decompiled/`
+
 ## Strange Quirks
 - The column for gears assigns reverse to 0, neutral to 1, first gear to 2, etc.
 - Velocity is a 3-D vector, but it is recorded in the form `<x>:<y>:<z>`, which means if you open it in Excel, velocity is a time
